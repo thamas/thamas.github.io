@@ -14,24 +14,45 @@
             box-sizing: inherit;
           }
           body {
+            margin: 0;
+            padding: 0;
             background-color: #ccc;
           }
           .wrap {
             max-width: 460px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 12px;
             background-color: #fff;
           }
           img {
+            display: block;
             max-width: 100%;
             height: auto;
+          }
+
+          @media screen and (min-width: 461px) {
+            body {
+              margin: 10px;
+            }
+            .wrap {
+              padding: 20px;
+            }
           }
         </style>
     </head>
     <body>
       <div class="wrap">
 
-        <img src="tamas-hajas.jpg" alt="Tamás Hajas" title="Tamás Hajas">
+        <img src="tamas-hajas-420.jpg" alt="Tamás Hajas" title="Tamás Hajas"
+          srcset="
+            tamas-hajas-200.jpg 200w,
+            tamas-hajas-356.jpg 356w,
+            tamas-hajas-420.jpg 420w,
+            tamas-hajas-840.jpg 840w"
+          sizes="
+            (max-width: 460px) calc(100vw - 24px),
+            420px"
+        >
 
         <p>Hi, I am</p>
         <h1>Tamás Hajas</h1>
